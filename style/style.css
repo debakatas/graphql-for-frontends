@@ -12,7 +12,7 @@
     --green: #34c4fc;
     --left: 40vw;
     --purple: #bf26ff;
-    --top: -10vw;
+    --top: -10vh;
     --white: #ccc;
 }
 
@@ -170,23 +170,19 @@ form {
 
 .mojo {
     animation: rotate var(--duration) infinite;
-    background-color: var(--green);
+    background: var(--green);
     display: block;
     height: 1rem;
     left: var(--left);
     position: absolute;
     top: var(--top);
-    transition: all var(--duration) cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all var(--duration) ease-in-out;
     width: 1rem;
-    will-change: top left;
+    will-change: top, left;
     z-index: 100;
 
-    &:nth-of-type(even) {
-        background-color: var(--purple);
-    }
-
-    &::nth-of-type(2n + 5) {
-        background-image: linear-gradient(to top left, var(--gradient));
+    &:nth-of-type(3n - 1) {
+        background: var(--purple);
     }
 }
 
