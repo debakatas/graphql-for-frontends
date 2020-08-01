@@ -1,0 +1,7 @@
+# import "./FragmentUser"
+
+query {
+    viewer {
+        ...FragmentUser
+    }
+}

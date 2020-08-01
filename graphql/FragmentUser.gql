@@ -1,0 +1,10 @@
+fragment FragmentUser on User {
+    login
+    avatarUrl(size: 80)
+    contributionsCollection {
+        totalCommitContributions
+        totalIssueContributions
+        totalRepositoryContributions
+        totalPullRequestContributions
+    }
+}

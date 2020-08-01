@@ -1,0 +1,22 @@
+#import "./FragmentUser.gql"
+
+query($user: String!) {
+    user(login: $user) {
+        ...FragmentUser
+        repositories(last: 10, isFork: false) {
+            nodes {
+                name
+                languages(last: 5) {
+                    nodes {
+                        name
+                    }
+                }
+                description
+                stargazers {
+                    totalCount
+                }
+                url
+            }
+        }
+    }
+}

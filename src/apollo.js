@@ -5,7 +5,7 @@ import gql from 'graphql-tag';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
 // I created a 15min account for this only 🤡
-const token = '5452cb34d0787d7e1860f617ca349aaee70cf058';
+const token = '40b469370939666fadee9fb2f22c3c73f73f362b';
 
 const httpLink = createHttpLink({
     uri: 'https://api.github.com/graphql',

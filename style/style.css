@@ -132,7 +132,7 @@ form {
 
 .searched-user {
     align-items: center;
-    display: flex;
+    display: none;
     justify-content: center;
     margin-right: 0;
 
