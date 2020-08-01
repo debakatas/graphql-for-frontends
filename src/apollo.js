@@ -23,16 +23,5 @@ const client = new ApolloClient({
     cache: new InMemoryCache(),
 });
 
-console.log(
-    client.query({
-        query: gql`
-            query {
-                viewer {
-                    login
-                }
-            }
-        `,
-    })
-);
 
 export default client;
