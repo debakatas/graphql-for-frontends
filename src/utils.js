@@ -38,4 +38,14 @@ export const runMojo = (mojo = 100, speed = 10) => {
     }, 10);
 };
 
-window.runMojo = runMojo;
+export const createMojo = (contributionsCollection) =>
+    Object
+        .values(contributionsCollection)
+        .filter(
+            (valor) =>
+                typeof valor === "number"
+                && !Number.isNaN(valor)
+        )
+        .reduce(
+            (acc, current) => (acc + current),
+        0)
